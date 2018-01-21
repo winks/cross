@@ -1,0 +1,5 @@
+*.o
+cross
+Makefile
+cross.pro.user
+moc_*.cpp
