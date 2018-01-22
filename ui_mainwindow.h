@@ -14,13 +14,11 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
-
 #include "clicklabel.h"
 
 QT_BEGIN_NAMESPACE
@@ -44,8 +42,8 @@ public:
         label = new ClickLabel(centralwidget);
         label->setObjectName(QStringLiteral("label"));
         label->setEnabled(true);
-        label->setGeometry(QRect(50, 50, 510, 510));
-        label->setMargin(1);
+        label->setGeometry(QRect(0, 0, 510, 510));
+        label->setProperty("margin", QVariant(1));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QStringLiteral("menubar"));
@@ -67,7 +65,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
-        label->setText(QApplication::translate("MainWindow", "TextLabel", Q_NULLPTR));
+        label->setProperty("text", QVariant(QApplication::translate("MainWindow", "TextLabel", Q_NULLPTR)));
         menuTest->setTitle(QApplication::translate("MainWindow", "Test", Q_NULLPTR));
     } // retranslateUi
 

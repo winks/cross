@@ -14,22 +14,22 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="ClickLabel" name="label">
+   <widget class="ClickLabel" name="label" native="true">
     <property name="enabled">
      <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>50</y>
+      <x>0</x>
+      <y>0</y>
       <width>510</width>
       <height>510</height>
      </rect>
     </property>
-    <property name="text">
+    <property name="text" stdset="0">
      <string>TextLabel</string>
     </property>
-    <property name="margin">
+    <property name="margin" stdset="0">
      <number>1</number>
     </property>
    </widget>
@@ -52,6 +52,13 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ClickLabel</class>
+   <extends>QWidget</extends>
+   <header>clicklabel.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
