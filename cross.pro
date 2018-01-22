@@ -8,8 +8,10 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = cross
+TARGET = bin/cross
 TEMPLATE = app
+
+QMAKE_CXXFLAGS += -std=c++0x
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings

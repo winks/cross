@@ -1,5 +1,6 @@
 *.o
-cross
+bin/cross
 Makefile
 cross.pro.user
 moc_*.cpp
+ui_*
